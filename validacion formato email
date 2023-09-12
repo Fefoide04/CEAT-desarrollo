@@ -1,0 +1,30 @@
+//funcion para validar formato email
+  public static bool ComprobarFormatoEmail(string MailAComprobar)
+        {
+            String Formato;
+            Formato = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(MailAComprobar, Formato))
+            {
+                if (Regex.Replace(MailAComprobar, Formato, String.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
+//en el textBox
+  private void txtMail_Leave(object sender, EventArgs e)
+        {
+            if (!Validaciones.ComprobarFormatoEmail(txtMail.Text))
+                MessageBox.Show(txtMail, "Formato de e-mail no valido");
+            else { }
+        }
