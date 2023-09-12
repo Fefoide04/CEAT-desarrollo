@@ -1,0 +1,37 @@
+//libreria
+using System.Net.Mail;
+
+//funcion enviar correo
+  public static void EnviarCorreo(StringBuilder Mensaje, DateTime FechaHora, string Para, out string Error)
+        {
+            Error = "";
+            try
+            {
+                Mensaje.Append(Environment.NewLine);
+                Mensaje.Append(string.Format("Este correo ha sido enviado el dia {0:dd/MM/yyyy} a las {0:HH:mm:ss} Hrs \n\n", FechaHora));
+                Mensaje.Append(Environment.NewLine);
+                MailMessage Mail = new MailMessage();
+                Mail.From = new MailAddress("lapsystem2023@gmail.com");
+                Mail.To.Add(Para);
+                Mail.Subject = "Envio de contraseña LapSystem";
+                Mail.Body = Mensaje.ToString();
+                SmtpClient smtp = new SmtpClient("smtp.gmail.com");
+                smtp.Port = 587;
+                smtp.UseDefaultCredentials = false;
+                smtp.Credentials = new System.Net.NetworkCredential(Variables.Usuario, Variables.Contraseña);
+                smtp.EnableSsl = true;
+                smtp.Send(Mail);
+                Error = "El Usuario fue dado de alta y le fue enviado un mail con sus credenciales";
+                MessageBox.Show(Error);
+            }
+           
+            catch (Exception ex)
+            {
+                Error = "Error: " + ex.Message;
+                MessageBox.Show(Error);
+                return;
+            }
+        }
+
+//se invoca a la funcion en el evento click de un botón 
+ EnviarCorreo(Mensaje, DateTime.Now, lblMail.Text, out Variables.Error);
