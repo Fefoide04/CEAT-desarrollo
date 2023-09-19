@@ -1,0 +1,73 @@
+crear backlog
+listar preguntas
+doc funcional
+analisis de informacion
+interfeces
+Entrevista 2
+
+observaciones!!!!!
+
+Guit:
+
+Microsoft Windows [Versión 10.0.19045.3448]
+(c) Microsoft Corporation. Todos los derechos reservados.
+
+C:\CEAT-desarrollo>git Add .
+git: 'Add' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+C:\CEAT-desarrollo>git add .
+
+C:\CEAT-desarrollo>git commit -m "hola git"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'maria@DESKTOP-21FKMU2.(none)')
+
+C:\CEAT-desarrollo>git config --global user.email "sarasa@gmail.com"
+
+C:\CEAT-desarrollo>git config --global user.name "Cosme Fulanito"
+
+C:\CEAT-desarrollo>git commit -m "hola git"
+[main a4e6132] hola git
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 hola git.txt
+
+C:\CEAT-desarrollo>git push -u origin main
+info: please complete authentication in your browser...
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 271 bytes | 90.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Fefoide04/CEAT-desarrollo.git
+   53799a0..a4e6132  main -> main
+branch 'main' set up to track 'origin/main'.
+
+C:\CEAT-desarrollo>git pull
+remote: Enumerating objects: 5, done.
+Unpacking objects: 100% (3/3), 656 bytes | 36.00 KiB/s, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+From https://github.com/Fefoide04/CEAT-desarrollo
+   a4e6132..39c3310  main       -> origin/main
+Updating a4e6132..39c3310
+Fast-forward
+ hola git.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+C:\CEAT-desarrollo>
