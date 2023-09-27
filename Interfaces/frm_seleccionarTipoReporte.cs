@@ -16,18 +16,17 @@ namespace Interfaces
             InitializeComponent();
 
             btn_reporteGeneral.BackColor = variables.colores.primaryHighlightColor;
-            btn_listado.BackColor = variables.colores.primaryBaseColor;
+            btn_relevamientoEspecifico.BackColor = variables.colores.primaryBaseColor;
             btn_regresar.BackColor = variables.colores.primarySelectedColor;
         }
 
-        private void btn_regresar_Click(object sender, EventArgs e)
+        private void btn_click(object sender, EventArgs e)
         {
-            metodos.cambiarFormulario(metodos.devolverFormularioPorCadena(btn_regresar.Tag.ToString()), variables.panelPrincipal);
-        }
+            Button boton = (Button)sender;
 
-        private void btn_reporteGeneral_Click(object sender, EventArgs e)
-        {
-            metodos.cambiarFormulario(metodos.devolverFormularioPorCadena(btn_reporteGeneral.Tag.ToString()), variables.panelPrincipal);
+            string tag = boton.Tag.ToString();
+
+            metodos.cambiarFormulario(metodos.devolverFormularioPorCadena(tag), variables.panelPrincipal);
         }
     }
 }

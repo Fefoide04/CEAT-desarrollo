@@ -35,8 +35,17 @@ namespace Interfaces
                 case "altaEstudiantes":
                     form = new frm_altaEstudiantes();
                     break;
+                case "perfilEstudiante":
+                    form = new frm_perfilEstudiante();
+                    break;
                 case "relevamientoAnual":
                     form = new frm_relevamientoRA();
+                    break;
+                case "reporteEspecifico":
+                    form = new frm_relevamientoEspecifico();
+                    break;
+                case "administracionUsuarios":
+                    form = new frm_administracionUsuarios();
                     break;
             }
 

@@ -14,6 +14,8 @@ namespace Interfaces
         public frm_visualizacionEstudiantes()
         {
             InitializeComponent();
+
+            //Aca deberíamos cargar en una data table la tabla estudiantes y usar un doble for para recorrerlo y cargar la grilla
         }
 
         private void btn_irConsultas_Click(object sender, EventArgs e)
@@ -24,6 +26,11 @@ namespace Interfaces
         private void btn_agregarEstudiantes_Click(object sender, EventArgs e)
         {
             metodos.cambiarFormulario(metodos.devolverFormularioPorCadena(btn_agregarEstudiantes.Tag.ToString()), variables.panelPrincipal);
+        }
+
+        private void dtg_vistaEstudiantes_DoubleClick(object sender, EventArgs e)
+        {
+            metodos.cambiarFormulario(metodos.devolverFormularioPorCadena(dtg_vistaEstudiantes.Tag.ToString()), variables.panelPrincipal);
         }
     }
 }

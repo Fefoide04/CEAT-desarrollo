@@ -48,11 +48,35 @@
   <ItemGroup>
     <Compile Include="Clases_Proyecto\variables.cs" />
     <Compile Include="comandosBD.cs" />
+    <Compile Include="frm_administracionUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_administracionUsuarios.Designer.cs">
+      <DependentUpon>frm_administracionUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_altaEstudiantes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_altaEstudiantes.Designer.cs">
       <DependentUpon>frm_altaEstudiantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_observacionEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_observacionEstudiante.Designer.cs">
+      <DependentUpon>frm_observacionEstudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_perfilEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_perfilEstudiante.Designer.cs">
+      <DependentUpon>frm_perfilEstudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_relevamientoEspecifico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_relevamientoEspecifico.Designer.cs">
+      <DependentUpon>frm_relevamientoEspecifico.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_relevamientoRA.cs">
       <SubType>Form</SubType>
@@ -81,8 +105,20 @@
     <Compile Include="Clases_Proyecto\metodos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_administracionUsuarios.resx">
+      <DependentUpon>frm_administracionUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_altaEstudiantes.resx">
       <DependentUpon>frm_altaEstudiantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_observacionEstudiante.resx">
+      <DependentUpon>frm_observacionEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_perfilEstudiante.resx">
+      <DependentUpon>frm_perfilEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_relevamientoEspecifico.resx">
+      <DependentUpon>frm_relevamientoEspecifico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_relevamientoRA.resx">
       <DependentUpon>frm_relevamientoRA.cs</DependentUpon>
@@ -119,6 +155,7 @@
   <ItemGroup>
     <None Include="Imagenes\Generales\Loco escuela Placeholder.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -31,9 +31,19 @@ namespace Interfaces
             metodos.cambiarFormulario(metodos.devolverFormularioPorCadena(btn_regresar.Tag.ToString()), variables.panelPrincipal);
         }
 
-        private void gbox_estudiante_Enter(object sender, EventArgs e)
+        private void btn_agregar_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show("¿Desea realizar alguna observación sobre el estudiante?", "", MessageBoxButtons.YesNo);
 
+            if (result == DialogResult.Yes)
+            {
+                Form form = new frm_observacionEstudiante();
+                form.ShowDialog();
+            }
+
+            MessageBox.Show("Se ha agregado el estudiante con éxito.", "", MessageBoxButtons.OK);
+
+            metodos.cambiarFormulario(metodos.devolverFormularioPorCadena(btn_agregar.Tag.ToString()), variables.panelPrincipal);
         }
     }
 }

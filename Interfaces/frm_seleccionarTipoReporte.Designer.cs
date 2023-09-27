@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_listado = new System.Windows.Forms.Button();
+            this.btn_relevamientoEspecifico = new System.Windows.Forms.Button();
             this.btn_reporteGeneral = new System.Windows.Forms.Button();
             this.btn_regresar = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -42,19 +42,21 @@
             this.panel1.Size = new System.Drawing.Size(880, 152);
             this.panel1.TabIndex = 1;
             // 
-            // btn_listado
+            // btn_relevamientoEspecifico
             // 
-            this.btn_listado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btn_listado.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_listado.FlatAppearance.BorderSize = 0;
-            this.btn_listado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_listado.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_listado.Location = new System.Drawing.Point(0, 233);
-            this.btn_listado.Name = "btn_listado";
-            this.btn_listado.Size = new System.Drawing.Size(880, 81);
-            this.btn_listado.TabIndex = 3;
-            this.btn_listado.Text = "Reporte Especifico";
-            this.btn_listado.UseVisualStyleBackColor = false;
+            this.btn_relevamientoEspecifico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btn_relevamientoEspecifico.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_relevamientoEspecifico.FlatAppearance.BorderSize = 0;
+            this.btn_relevamientoEspecifico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_relevamientoEspecifico.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_relevamientoEspecifico.Location = new System.Drawing.Point(0, 233);
+            this.btn_relevamientoEspecifico.Name = "btn_relevamientoEspecifico";
+            this.btn_relevamientoEspecifico.Size = new System.Drawing.Size(880, 81);
+            this.btn_relevamientoEspecifico.TabIndex = 3;
+            this.btn_relevamientoEspecifico.Tag = "reporteEspecifico";
+            this.btn_relevamientoEspecifico.Text = "Reporte Específico";
+            this.btn_relevamientoEspecifico.UseVisualStyleBackColor = false;
+            this.btn_relevamientoEspecifico.Click += new System.EventHandler(this.btn_click);
             // 
             // btn_reporteGeneral
             // 
@@ -70,7 +72,7 @@
             this.btn_reporteGeneral.Tag = "relevamientoAnual";
             this.btn_reporteGeneral.Text = "Reporte General";
             this.btn_reporteGeneral.UseVisualStyleBackColor = false;
-            this.btn_reporteGeneral.Click += new System.EventHandler(this.btn_reporteGeneral_Click);
+            this.btn_reporteGeneral.Click += new System.EventHandler(this.btn_click);
             // 
             // btn_regresar
             // 
@@ -84,16 +86,16 @@
             this.btn_regresar.Size = new System.Drawing.Size(880, 81);
             this.btn_regresar.TabIndex = 4;
             this.btn_regresar.Tag = "estudiantes";
-            this.btn_regresar.Text = "Regresar";
+            this.btn_regresar.Text = "Regresar a Estudiantes";
             this.btn_regresar.UseVisualStyleBackColor = false;
-            this.btn_regresar.Click += new System.EventHandler(this.btn_regresar_Click);
+            this.btn_regresar.Click += new System.EventHandler(this.btn_click);
             // 
             // frm_seleccionarTipoReporte
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(880, 530);
             this.Controls.Add(this.btn_regresar);
-            this.Controls.Add(this.btn_listado);
+            this.Controls.Add(this.btn_relevamientoEspecifico);
             this.Controls.Add(this.btn_reporteGeneral);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -106,7 +108,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btn_listado;
+        private System.Windows.Forms.Button btn_relevamientoEspecifico;
         private System.Windows.Forms.Button btn_reporteGeneral;
         private System.Windows.Forms.Button btn_regresar;
     }

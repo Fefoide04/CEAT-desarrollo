@@ -14,6 +14,15 @@ namespace Interfaces
         public frm_relevamientoRA()
         {
             InitializeComponent();
+
+            pnl_encabezadoRelevamientoRA.BackColor = variables.colores.primaryHighlightColor;
+
+            btn_regresar.BackColor = variables.colores.primarySelectedColor;
+        }
+
+        private void btn_regresar_Click(object sender, EventArgs e)
+        {
+            metodos.cambiarFormulario(metodos.devolverFormularioPorCadena(btn_regresar.Tag.ToString()), variables.panelPrincipal);
         }
     }
 }

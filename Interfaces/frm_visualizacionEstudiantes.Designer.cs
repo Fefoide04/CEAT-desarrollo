@@ -33,6 +33,8 @@
             this.txt_busqueda = new System.Windows.Forms.TextBox();
             this.cmb_filtros = new System.Windows.Forms.ComboBox();
             this.btn_agregarEstudiantes = new System.Windows.Forms.Button();
+            this.lbl_buscar = new System.Windows.Forms.Label();
+            this.lbl_filtro = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_vistaEstudiantes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,6 +45,8 @@
             this.dtg_vistaEstudiantes.Name = "dtg_vistaEstudiantes";
             this.dtg_vistaEstudiantes.Size = new System.Drawing.Size(829, 369);
             this.dtg_vistaEstudiantes.TabIndex = 0;
+            this.dtg_vistaEstudiantes.Tag = "perfilEstudiante";
+            this.dtg_vistaEstudiantes.DoubleClick += new System.EventHandler(this.dtg_vistaEstudiantes_DoubleClick);
             // 
             // btn_irConsultas
             // 
@@ -68,6 +72,11 @@
             // 
             this.cmb_filtros.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_filtros.FormattingEnabled = true;
+            this.cmb_filtros.Items.AddRange(new object[] {
+            "Nombre",
+            "Apellido",
+            "Caracterización",
+            "Categoria"});
             this.cmb_filtros.Location = new System.Drawing.Point(722, 44);
             this.cmb_filtros.Name = "cmb_filtros";
             this.cmb_filtros.Size = new System.Drawing.Size(132, 29);
@@ -85,11 +94,33 @@
             this.btn_agregarEstudiantes.UseVisualStyleBackColor = true;
             this.btn_agregarEstudiantes.Click += new System.EventHandler(this.btn_agregarEstudiantes_Click);
             // 
+            // lbl_buscar
+            // 
+            this.lbl_buscar.AutoSize = true;
+            this.lbl_buscar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_buscar.Location = new System.Drawing.Point(21, 21);
+            this.lbl_buscar.Name = "lbl_buscar";
+            this.lbl_buscar.Size = new System.Drawing.Size(209, 20);
+            this.lbl_buscar.TabIndex = 4;
+            this.lbl_buscar.Text = "Presione ENTER para buscar";
+            // 
+            // lbl_filtro
+            // 
+            this.lbl_filtro.AutoSize = true;
+            this.lbl_filtro.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_filtro.Location = new System.Drawing.Point(757, 21);
+            this.lbl_filtro.Name = "lbl_filtro";
+            this.lbl_filtro.Size = new System.Drawing.Size(48, 20);
+            this.lbl_filtro.TabIndex = 5;
+            this.lbl_filtro.Text = "Filtros";
+            // 
             // frm_visualizacionEstudiantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(880, 530);
+            this.Controls.Add(this.lbl_filtro);
+            this.Controls.Add(this.lbl_buscar);
             this.Controls.Add(this.cmb_filtros);
             this.Controls.Add(this.txt_busqueda);
             this.Controls.Add(this.btn_agregarEstudiantes);
@@ -111,6 +142,8 @@
         private System.Windows.Forms.TextBox txt_busqueda;
         private System.Windows.Forms.ComboBox cmb_filtros;
         private System.Windows.Forms.Button btn_agregarEstudiantes;
+        private System.Windows.Forms.Label lbl_buscar;
+        private System.Windows.Forms.Label lbl_filtro;
     }
 }
 

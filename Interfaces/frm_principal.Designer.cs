@@ -108,7 +108,7 @@
             this.btn_usuarios.Name = "btn_usuarios";
             this.btn_usuarios.Size = new System.Drawing.Size(183, 57);
             this.btn_usuarios.TabIndex = 12;
-            this.btn_usuarios.Tag = "usuarios";
+            this.btn_usuarios.Tag = "administracionUsuarios";
             this.btn_usuarios.Text = "Administrar Usuarios";
             this.btn_usuarios.UseVisualStyleBackColor = false;
             this.btn_usuarios.Click += new System.EventHandler(this.botonesClick);
@@ -190,7 +190,7 @@
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.MaximizeBox = false;
             this.Name = "frm_principal";
-            this.Text = "frm_principal";
+            this.Text = "Software CEAT San Vicente";
             this.pnl_botones.ResumeLayout(false);
             this.pnl_encabezado.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
