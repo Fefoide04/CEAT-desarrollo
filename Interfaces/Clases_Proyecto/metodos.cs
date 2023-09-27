@@ -1,0 +1,46 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+using System.Windows.Forms;
+
+namespace Interfaces
+{
+    class metodos
+    {
+        public static void cambiarFormulario(Form formulario, Panel pan)
+        {
+            pan.Controls.Clear();
+
+            formulario.TopLevel = false;
+
+            pan.Controls.Add(formulario);
+
+            formulario.Show();
+        }
+
+        public static Form devolverFormularioPorCadena(string cadena)
+        {
+            Form form = new Form();
+
+            switch (cadena)
+            {
+                case "reportes":
+                    form = new frm_seleccionarTipoReporte();
+                    break;
+                case "estudiantes":
+                    form = new frm_visualizacionEstudiantes();
+                    break;
+                case "altaEstudiantes":
+                    form = new frm_altaEstudiantes();
+                    break;
+                case "relevamientoAnual":
+                    form = new frm_relevamientoRA();
+                    break;
+            }
+
+            return form;
+        }
+    }
+}
